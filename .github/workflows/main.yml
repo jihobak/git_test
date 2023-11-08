@@ -3,7 +3,7 @@ name: CI
 on:
   pull_request:
     branches:
-      - feature
+      - develop
 
 jobs:
 
@@ -13,6 +13,7 @@ jobs:
     steps:
       - name: echo-default-env-variables
         run: |
+          echo "main branch"
           echo "Home: ${HOME}"
           echo "GITHUB_WORKFLOW: ${GITHUB_WORKFLOW}"
           echo "GITHUB_ACTIONS: ${GITHUB_ACTIONS}"
